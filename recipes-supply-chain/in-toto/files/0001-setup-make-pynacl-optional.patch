@@ -1,0 +1,36 @@
+From 0eec96b1e73f646edb543da0742f0f8f89aa9f90 Mon Sep 17 00:00:00 2001
+From: Joshua Lock <jlock@vmware.com>
+Date: Tue, 2 Jul 2019 21:22:52 +0100
+Subject: [PATCH] setup: make pynacl optional
+
+install_requires should list "what a project minimally needs to run
+correctly"[1] and the presence of these dependencies is checked at runtime
+when the project is installed via pip.
+
+The securesystemslib pynacl extras allow for faster implementations of
+cryptographic algorithms, but aren't required in order to run - therefore
+they should not be listed in install_requires.
+
+1. https://packaging.python.org/discussions/install-requires-vs-requirements
+
+Signed-off-by: Joshua Lock <jlock@vmware.com>
+
+Upstream-Status: Submitted (https://github.com/in-toto/in-toto/pull/291)
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 85dda78..3f34985 100755
+--- a/setup.py
++++ b/setup.py
+@@ -70,7 +70,7 @@ setup(
+   ],
+   packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests",
+       "debian"]),
+-  install_requires=["six", "securesystemslib[crypto,pynacl]>=0.11.3", "attrs",
++  install_requires=["six", "securesystemslib[crypto]>=0.11.3", "attrs",
+                     "python-dateutil", "iso8601", "pathspec",
+                     "subprocess32; python_version < '3'"],
+   test_suite="tests.runtests",
