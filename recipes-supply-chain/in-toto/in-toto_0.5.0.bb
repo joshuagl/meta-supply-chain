@@ -3,7 +3,7 @@ HOMEPAGE = "https://in-toto.io/"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://PKG-INFO;beginline=8;endline=8;md5=c2d9643b4523fdf462545aeb1356ad23"
 
-SRC_URI[sha256sum] = "94a48896d41cfd57235a0152af401f010e9c5720f44a6c841cbc11e8d7c3a8a1"
+SRC_URI[sha256sum] = "bf6d44bd245169899d7e2b9ad3c58093a01186f3e0d84e48ac3ded8fbac0f7da"
 
 inherit pypi setuptools3
 
