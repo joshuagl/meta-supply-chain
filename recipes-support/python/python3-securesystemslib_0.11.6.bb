@@ -4,7 +4,7 @@ HOMEPAGE = "https://github.com/secure-systems-lab/securesystemslib"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://PKG-INFO;beginline=8;endline=8;md5=23f9ad5cad3d8cc0336e2a5d8a87e1fa"
 
-SRC_URI[sha256sum] = "cbd1f7f1af2f2921be33b9fd17384705f5f4147d3a8b5d95b33ec3ce2213f176"
+SRC_URI[sha256sum] = "3c3b44140a6729ed014dc0591d803848fc4fc95652300db6467d45c5ff11ba5c"
 
 inherit pypi setuptools3
 
